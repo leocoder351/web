@@ -1,0 +1,35 @@
+.user-job-detail {
+  padding-left: 20%;
+  padding-right: 20%;
+
+  .user-job-detail-content {
+    margin-top: 60px;
+
+    h3 {
+      margin-bottom: 60px;
+    }
+
+    h4 {
+      color: #999;
+      margin-top: 20px;
+      margin-bottom: 20px;
+    }
+
+    p {
+      padding: 5px 0;
+    }
+
+    .user-job-detail-delivery-email {
+      color: #b28247;
+      font-size: 1.4em;
+      letter-spacing: 0.05em;
+    }
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .user-job-detail {
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+}

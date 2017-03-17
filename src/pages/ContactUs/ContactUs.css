@@ -1,0 +1,32 @@
+.user-contact #map {
+  max-width: 800px;
+  height: 400px;
+  margin: 50px 50px 0 10px; }
+
+.user-contact .user-contact-info {
+  max-width: 800px;
+  position: absolute;
+  top: 140px;
+  left: 962px; }
+  .user-contact .user-contact-info img {
+    margin-right: 40px; }
+  .user-contact .user-contact-info span {
+    font-size: 18px;
+    color: #999; }
+  .user-contact .user-contact-info p {
+    margin-left: 58px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    font-size: 1.2em; }
+
+@media screen and (max-width: 1370px) {
+  .user-contact .user-contact-info {
+    left: 860px; } }
+
+@media screen and (max-width: 1140px) {
+  .user-contact #map {
+    margin: 50px auto;
+    height: 250px; }
+  .user-contact .user-contact-info {
+    position: inherit;
+    margin: 0 auto; } }

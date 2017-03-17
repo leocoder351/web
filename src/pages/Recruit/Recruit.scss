@@ -1,0 +1,39 @@
+.user-recruit {
+  position: relative;
+
+  a {
+    display: block;
+    width: 234px;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+    cursor: pointer;
+    background-color: #c8b281;
+    margin: 0 auto;
+    color: #f6f6f6;
+    font-size: 1.4em;
+    font-family: "SimSun";
+    font-weight: 200;
+    letter-spacing: 0.1em;
+    position: relative;
+    top: -270px;
+    border: 1px solid #c8b281;
+    outline-style: none;
+    border-radius: 30px;
+  }
+
+  a:hover {
+    color: #944;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .user-recruit {
+
+    a {
+      width: 100%;
+      position: static;
+      border-radius: 0;
+    }
+  }
+}

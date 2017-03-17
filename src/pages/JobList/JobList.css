@@ -1,0 +1,20 @@
+.user-job {
+  padding-left: 13%;
+  padding-right: 13%; }
+  .user-job .user-total-jobs {
+    margin: 60px 0 20px 0;
+    color: #999; }
+  .user-job .user-job-table td, .user-job .user-job-table th {
+    height: 60px;
+    line-height: 60px; }
+  .user-job .user-job-table th {
+    font-size: 1.2em; }
+  .user-job .user-job-table td {
+    color: #999; }
+  .user-job .user-job-table a {
+    cursor: pointer; }
+
+@media screen and (max-width: 800px) {
+  .user-job {
+    padding-left: 10px;
+    padding-right: 10px; } }

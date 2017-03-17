@@ -1,0 +1,40 @@
+@charset "UTF-8";
+.user-footer {
+  width: 100%;
+  height: 300px;
+  background-color: #262626;
+  text-align: center;
+  padding-top: 50px;
+  margin-top: 50px; }
+  .user-footer .user-footer-info {
+    height: 220px;
+    color: #944;
+    margin-bottom: 20px;
+    /* 未访问的链接 */
+    /* 已访问的链接 */
+    /* 鼠标移动到链接上 */
+    /* 选定的链接 */ }
+    .user-footer .user-footer-info .user-footer-logo {
+      margin-bottom: 30px; }
+    .user-footer .user-footer-info .user-footer-link {
+      text-decoration: none; }
+    .user-footer .user-footer-info p {
+      margin: 10px; }
+    .user-footer .user-footer-info a {
+      padding: 0 10px; }
+    .user-footer .user-footer-info a:link {
+      color: #999; }
+    .user-footer .user-footer-info a:visited {
+      color: #999; }
+    .user-footer .user-footer-info a:hover {
+      color: #FF0000; }
+    .user-footer .user-footer-info a:active {
+      color: #00FFFF; }
+  .user-footer .user-footer-copyright {
+    height: 81px;
+    border-top: 1px solid #333;
+    background-color: #262626; }
+    .user-footer .user-footer-copyright p {
+      height: 80px;
+      line-height: 80px;
+      color: #999; }

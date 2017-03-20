@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
 import T from 'i18n-react';
-import $ from 'jquery';
-import { Menu } from 'semantic-ui-react';
 import { Link } from 'react-router';
+import Avatar from '../../images/avatar.jpg'
 import './NavigationBar.css';
 
 class NavigationBar extends Component {
@@ -10,56 +9,63 @@ class NavigationBar extends Component {
   constructor(props) {
     super(props);
 
-    this.state = {
-      activeItem:           'home'
-    }
-
-    this.handleItemClick = this.handleItemClick.bind(this);
-  }
-
-  handleItemClick (e, name) {
-    this.setState({
-      activeItem:       name
-    })
   }
 
   render() {
 
     // i18n
     T.setTexts({
-      'company-name':                   '迈帝法马扫一扫',
 
-      'index-page':                     '首页',
-
-      'service-items': {
-        'title':                        '服务项目',
-
-        // items
-        'drug-trace':                   '知药追溯',
-        'drug-app':                     '知药APP',
-        'palm-pharmacy':                '掌上药店',
-        'general-practitioner':         '社区医生',
-        'skyline-practitioner':         '天涯医生'
-      },
-
-      'about-us':                       '关于我们',
-      'recruit':                        '招贤纳士',
-
-      'contact-us':                     '联系我们',
     });
 
     return (
-      <Menu vertical>
-        <Menu.Item name='profile' as={Link} to='profile'>
-          profile
-        </Menu.Item>
-        <Menu.Item name='user' as={Link} to='user'>
-          user
-        </Menu.Item>
-        <Menu.Item name='contact' as={Link} to='contact'>
-          contact
-        </Menu.Item>
-      </Menu>
+      <nav className="user-nav">
+
+          <div className="ui left fixed inverted vertical menu">
+            <img className="ui tiny  image" src={Avatar} width={20} />
+
+
+              <Link to="/" className="item active">首页</Link>
+
+
+
+              <Link to="/articles" className="item">文章</Link>
+
+
+
+              <Link to="/works" className="item">作品</Link>
+
+
+
+              <Link to="/about-me" className="item">关于我</Link>
+
+
+            {/* <a className="item active">
+              Home
+            </a>
+            <a className="item">
+              Messages
+            </a>
+            <a className="item">
+              Friends
+            </a> */}
+            <div className="item">
+
+              <div className="ui icon input">
+                <input type="text" placeholder="Search..." />
+                <i className="circular search link icon"></i>
+              </div>
+
+            </div>
+          </div>
+
+          {/* <div className="ui left fixed vertical pointing menu user-link">
+            <Link to="/" className="active item">首页</Link>
+            <Link to="/articles" className="item">文章</Link>
+            <Link to="/works" className="item">作品</Link>
+            <Link to="/about-me" className="item">关于我</Link>
+          </div> */}
+      </nav>
     );
   }
 }

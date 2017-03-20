@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import T from 'i18n-react';
-import './HomePage.css';
+import './Work.css';
 
-class HomePage extends Component {
+class Work extends Component {
 
   componentWillMount() {
     // 滚动条回到顶部
@@ -18,10 +18,10 @@ class HomePage extends Component {
 
     return (
       <div>
-        <h1>首页</h1>
+        <h1>作品</h1>
       </div>
     );
   }
 }
 
-export default HomePage;
+export default Work;

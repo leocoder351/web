@@ -1,19 +1,19 @@
 .user-nav {
 
+
+
   .user-info {
-    margin-top: 10px;
-    margin-bottom: 20px;
 
     .user-avatar {
       border-radius: 40px;
       margin-left: 10px;
-      margin-right: 20px;
-
+      cursor: pointer;
     }
+
   }
 
-  .user-external-links {
-    margin-top: 100px;
+  .user-content {
+    margin-top: 0 !important;
+    min-height: 880px;
   }
-
 }

@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import T from 'i18n-react';
 import $ from 'jquery';
 import { Link } from 'react-router';
-import { Sidebar, Segment, Button, Menu, Image, Icon, Header, Loader, Dimmer, Popup } from 'semantic-ui-react'
+import { Sidebar, Segment, Button, Menu, Image, Icon, Header, Loader, Dimmer, Popup, Reveal } from 'semantic-ui-react'
 import Avatar from '../../images/avatar.jpg';
 import Signature from '../../images/signature_white.png';
 import './NavigationBar.css';
@@ -69,11 +69,22 @@ class NavigationBar extends Component {
 
         <div className="user-info">
           <Segment basic>
-            <Popup
+
+            <Reveal animated='rotate'>
+              <Reveal.Content visible>
+                <Image shape='circular' src={Avatar} size='tiny' />
+              </Reveal.Content>
+              <Reveal.Content hidden>
+                <Image shape='circular' src={Signature} size='tiny' />
+              </Reveal.Content>
+            </Reveal>
+
+
+            {/* <Popup
               position="right center"
               trigger={<img className="user-avatar" src={Avatar} width={80} onClick={this.toggleVisibility} />}
               content="点我试试"
-            />
+            /> */}
           </Segment>
         </div>
 

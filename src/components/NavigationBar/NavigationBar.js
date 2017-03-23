@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import T from 'i18n-react';
 import $ from 'jquery';
 import { Link } from 'react-router';
-import { Sidebar, Segment, Button, Menu, Image, Icon, Header } from 'semantic-ui-react'
+import { Sidebar, Segment, Button, Menu, Image, Icon, Header, Loader, Dimmer } from 'semantic-ui-react'
 import Avatar from '../../images/avatar.jpg';
 import Signature from '../../images/signature_white.png';
 import './NavigationBar.css';
@@ -16,15 +16,15 @@ class NavigationBar extends Component {
     this.handleItemClick = this.handleItemClick.bind(this);
 
     this.state = {
-      visible:          true
+      visible:                    true,
+      activeItem:                 null
     }
   }
 
   toggleVisibility() {
 
     this.setState({
-      visible:                    !this.state.visible,
-      activeItem:                 null
+      visible:                    !this.state.visible
     })
   }
 
@@ -35,9 +35,8 @@ class NavigationBar extends Component {
     })
   }
 
-
   render() {
-    const { visible, activeItem } = this.state
+    const { visible, active, activeItem } = this.state;
     return (
       <div className="user-nav">
 
@@ -46,7 +45,7 @@ class NavigationBar extends Component {
         </div>
 
         <Sidebar.Pushable as={Segment} className="user-content">
-          <Sidebar className="user-links" onClick={this.changeActive} as={Menu} animation='push' width='thin' visible={visible} icon='labeled' vertical inverted>
+          <Sidebar className="user-links" as={Menu} animation='push' width='thin' visible={visible} icon='labeled' vertical inverted>
             <Menu.Item name='home' active={activeItem === 'home'} onClick={this.handleItemClick}>
               <Link to="/" className="item">
                 <Icon name='home' />
@@ -74,13 +73,10 @@ class NavigationBar extends Component {
                 关于我
               </Link>
             </Menu.Item>
-
           </Sidebar>
+
           <Sidebar.Pusher>
-            <Segment basic>
-              <Header as='h3'>Application Content</Header>
-              <Image src='/assets/images/wireframe/paragraph.png' />
-            </Segment>
+            {this.props.children}
           </Sidebar.Pusher>
         </Sidebar.Pushable>
       </div>

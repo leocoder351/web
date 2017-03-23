@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import T from 'i18n-react';
-import './AboutMe.css';
+import './About.css';
 
-class AboutMe extends Component {
+class About extends Component {
 
   componentWillMount() {
     // 滚动条回到顶部
@@ -24,4 +24,4 @@ class AboutMe extends Component {
   }
 }
 
-export default AboutMe;
+export default About;

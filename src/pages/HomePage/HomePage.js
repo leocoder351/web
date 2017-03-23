@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import T from 'i18n-react';
-import { Sidebar, Segment, Button, Menu, Image, Icon, Header, Loader, Dimmer } from 'semantic-ui-react'
+import { Sidebar, Segment, Button, Menu, Image, Icon, Header, Loader, Dimmer, Embed } from 'semantic-ui-react'
 import './HomePage.css';
 
 class HomePage extends Component {
@@ -77,6 +77,8 @@ class HomePage extends Component {
             <p>
               持续健康从细节考虑参加昆仑雪菊看来下次考虑尽快了重新
             </p>
+
+
           </Segment>
 
 

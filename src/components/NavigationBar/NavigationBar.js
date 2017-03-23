@@ -49,7 +49,7 @@ class NavigationBar extends Component {
 
     this.setState({
       visible:                    !this.state.visible
-    })
+    });
   }
 
   handleItemClick(e, {name}) {

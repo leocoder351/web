@@ -3,8 +3,8 @@ import T from 'i18n-react';
 import $ from 'jquery';
 import { Link } from 'react-router';
 import { Sidebar, Segment, Button, Menu, Image, Icon, Header, Loader, Dimmer, Popup, Reveal } from 'semantic-ui-react'
-import Avatar from '../../images/avatar.jpg';
-import Signature from '../../images/signature_white.png';
+import Avatar from '../../assets/images/others/avatar.jpg';
+import Signature from '../../assets/images/others/signature_white.png';
 import './NavigationBar.css';
 
 class NavigationBar extends Component {
@@ -19,7 +19,8 @@ class NavigationBar extends Component {
     this.state = {
       visible:                    true,
       activeItem:                 null,
-      direction:                  'left'
+      direction:                  'left',
+      pusherStyle:                {paddingRight: '150px'}
     }
   }
 
@@ -62,29 +63,18 @@ class NavigationBar extends Component {
   }
 
   render() {
-    const { visible, activeItem, direction } = this.state;
+    const { visible, activeItem, direction, pusherStyle } = this.state;
 
     return (
       <div className="user-nav">
 
         <div className="user-info">
           <Segment basic>
-
-            <Reveal animated='rotate'>
-              <Reveal.Content visible>
-                <Image shape='circular' src={Avatar} size='tiny' />
-              </Reveal.Content>
-              <Reveal.Content hidden>
-                <Image shape='circular' src={Signature} size='tiny' />
-              </Reveal.Content>
-            </Reveal>
-
-
-            {/* <Popup
+            <Popup
               position="right center"
               trigger={<img className="user-avatar" src={Avatar} width={80} onClick={this.toggleVisibility} />}
               content="点我试试"
-            /> */}
+            />
           </Segment>
         </div>
 
@@ -126,7 +116,7 @@ class NavigationBar extends Component {
             </Menu.Item>
           </Sidebar>
 
-          <Sidebar.Pusher>
+          <Sidebar.Pusher className="user-side-pusher" style={visible ? pusherStyle : {}}>
             {this.props.children}
           </Sidebar.Pusher>
         </Sidebar.Pushable>

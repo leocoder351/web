@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import T from 'i18n-react';
-import { Sidebar, Segment, Button, Menu, Image, Icon, Header, Loader, Dimmer, Embed } from 'semantic-ui-react'
+import {
+  Sidebar, Segment, Button, Menu, Image, Icon, Header, Loader, Dimmer, Embed,
+  Label, Breadcrumb
+} from 'semantic-ui-react'
 import './HomePage.css';
 
 class HomePage extends Component {
@@ -32,7 +35,9 @@ class HomePage extends Component {
 
     return (
       <div>
-        <Segment basic>
+
+        <Segment basic color="violet">
+
           <Header as='h3' color="violet">
             <Icon name='plug' />
             <Header.Content>
@@ -40,46 +45,42 @@ class HomePage extends Component {
             </Header.Content>
           </Header>
 
-          <Segment color="violet">
-            <p>
-              你好是大家都爱神的箭卡拉斯科了按时
-            </p>
-            <p>
-              持续健康从细节考虑参加昆仑雪菊看来下次考虑尽快了重新
-            </p>
-            <p>
-              你好是大家都爱神的箭卡拉斯科了按时
-            </p>
-            <p>
-              持续健康从细节考虑参加昆仑雪菊看来下次考虑尽快了重新
-            </p>
-            <p>
-              你好是大家都爱神的箭卡拉斯科了按时
-            </p>
-            <p>
-              持续健康从细节考虑参加昆仑雪菊看来下次考虑尽快了重新
-            </p>
-            <p>
-              你好是大家都爱神的箭卡拉斯科了按时
-            </p>
-            <p>
-              持续健康从细节考虑参加昆仑雪菊看来下次考虑尽快了重新
-            </p>
-            <p>
-              你好是大家都爱神的箭卡拉斯科了按时
-            </p>
-            <p>
-              持续健康从细节考虑参加昆仑雪菊看来下次考虑尽快了重新
-            </p>
-            <p>
-              你好是大家都爱神的箭卡拉斯科了按时
-            </p>
-            <p>
-              持续健康从细节考虑参加昆仑雪菊看来下次考虑尽快了重新
-            </p>
-
-
-          </Segment>
+          <p>
+            你好是大家都爱神的箭卡拉斯科了按时
+          </p>
+          <p>
+            持续健康从细节考虑参加昆仑雪菊看来下次考虑尽快了重新
+          </p>
+          <p>
+            你好是大家都爱神的箭卡拉斯科了按时
+          </p>
+          <p>
+            持续健康从细节考虑参加昆仑雪菊看来下次考虑尽快了重新
+          </p>
+          <p>
+            你好是大家都爱神的箭卡拉斯科了按时
+          </p>
+          <p>
+            持续健康从细节考虑参加昆仑雪菊看来下次考虑尽快了重新
+          </p>
+          <p>
+            你好是大家都爱神的箭卡拉斯科了按时
+          </p>
+          <p>
+            持续健康从细节考虑参加昆仑雪菊看来下次考虑尽快了重新
+          </p>
+          <p>
+            你好是大家都爱神的箭卡拉斯科了按时
+          </p>
+          <p>
+            持续健康从细节考虑参加昆仑雪菊看来下次考虑尽快了重新
+          </p>
+          <p>
+            你好是大家都爱神的箭卡拉斯科了按时
+          </p>
+          <p>
+            持续健康从细节考虑参加昆仑雪菊看来下次考虑尽快了重新
+          </p>
 
 
         </Segment>

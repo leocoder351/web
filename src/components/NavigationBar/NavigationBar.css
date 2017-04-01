@@ -1,9 +1,10 @@
 .user-nav .user-info {
   background-image: url("../../assets/images/backgrounds/1.jpg"); }
-  .user-nav .user-info .user-avatar {
-    border-radius: 40px;
-    margin-left: 10px;
-    cursor: pointer; }
+
+.user-nav .user-info .user-avatar {
+  border-radius: 40px;
+  margin-left: 10px;
+  cursor: pointer; }
 
 .user-nav .user-content {
   margin-top: 0 !important;

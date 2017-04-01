@@ -1,5 +1,9 @@
 import React, { Component } from 'react';
 import T from 'i18n-react';
+import {
+  Sidebar, Segment, Button, Menu, Image, Icon, Header, Loader, Dimmer, Embed,
+  Label, Breadcrumb, Item, Image as ImageComponent, Rail, Statistic
+} from 'semantic-ui-react';
 import './Photo.css';
 
 class Photo extends Component {
@@ -17,8 +21,11 @@ class Photo extends Component {
     });
 
     return (
-      <div>
-        <h1>相册</h1>
+      <div className="user-photo">
+        <Segment basic color="violet">
+          <h1>相册</h1>
+        </Segment>
+
       </div>
     );
   }

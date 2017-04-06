@@ -5,8 +5,9 @@ const ArticleItems = [
 
   {
     id:                 1,
-    title:              '我是一个标题',
-    date:               '2017/03/31',
+    title:              'JSONP跨域问题解析',
+    englishTitle:       'JSONP',
+    date:               '2017-04-02',
     summary:            '我是摘要我是摘要我是摘要我是摘要我是摘要我是摘要我是摘要我是摘要',
     image:              ArtImg1,
     keywords:           ['IMAX', 'ADD', 'HTML', 'JAVASCRIPT']
@@ -14,8 +15,9 @@ const ArticleItems = [
 
   {
     id:                 2,
-    title:              '我是一个标题',
-    date:               '2017/04/01',
+    title:              'Javascript作用域',
+    englishTitle:       'Javascript',
+    date:               '2017-04-03',
     summary:            '我是摘要我是摘要我是摘要我是摘要我是摘要我是摘要我是摘要我是摘要',
     image:              ArtImg2,
     keywords:           ['NIH', 'ADD', 'HTML', 'JAVASCRIPT']
@@ -24,7 +26,8 @@ const ArticleItems = [
   {
     id:                 3,
     title:              '我是一个标题',
-    date:               '2017/04/01',
+    englishTitle:       'asdasdasd-bbb',
+    date:               '2017-04-01',
     summary:            '我是摘要我是摘要我是摘要我是摘要我是摘要我是摘要我是摘要我是摘要',
     image:              ArtImg2,
     keywords:           ['NIH', 'ADD', 'HTML', 'JAVASCRIPT']
@@ -33,7 +36,8 @@ const ArticleItems = [
   {
     id:                 4,
     title:              '我是一个标题',
-    date:               '2017/04/01',
+    englishTitle:       'aaa-zxcxz',
+    date:               '2017-04-01',
     summary:            '我是摘要我是摘要我是摘要我是摘要我是摘要我是摘要我是摘要我是摘要',
     image:              ArtImg2,
     keywords:           ['NIH', 'ADD', 'HTML', 'JAVASCRIPT']
@@ -42,7 +46,8 @@ const ArticleItems = [
   {
     id:                 5,
     title:              '我是一个标题',
-    date:               '2017/04/01',
+    englishTitle:       'dasxcvbbvxcb',
+    date:               '2017-04-01',
     summary:            '我是摘要我是摘要我是摘要我是摘要我是摘要我是摘要我是摘要我是摘要',
     image:              ArtImg2,
     keywords:           ['NIH', 'ADD', 'HTML', 'JAVASCRIPT']
@@ -51,7 +56,8 @@ const ArticleItems = [
   {
     id:                 6,
     title:              '我是一个标题',
-    date:               '2017/04/01',
+    englishTitle:       'gfdg',
+    date:               '2017-04-01',
     summary:            '我是摘要我是摘要我是摘要我是摘要我是摘要我是摘要我是摘要我是摘要',
     image:              ArtImg2,
     keywords:           ['NIH', 'ADD', 'HTML', 'JAVASCRIPT']
@@ -60,7 +66,8 @@ const ArticleItems = [
   {
     id:                 7,
     title:              '我是一个标题',
-    date:               '2017/03/31',
+    englishTitle:       'bcvh',
+    date:               '2017-03-31',
     summary:            '我是摘要我是摘要我是摘要我是摘要我是摘要我是摘要我是摘要我是摘要',
     image:              ArtImg1,
     keywords:           ['IMAX', 'ADD', 'HTML', 'JAVASCRIPT']
@@ -69,7 +76,8 @@ const ArticleItems = [
   {
     id:                 8,
     title:              '我是一个标题',
-    date:               '2017/04/01',
+    englishTitle:       'hfgdfg',
+    date:               '2017-04-01',
     summary:            '我是摘要我是摘要我是摘要我是摘要我是摘要我是摘要我是摘要我是摘要',
     image:              ArtImg2,
     keywords:           ['NIH', 'ADD', 'HTML', 'JAVASCRIPT']

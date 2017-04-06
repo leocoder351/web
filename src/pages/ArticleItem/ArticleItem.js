@@ -16,7 +16,8 @@ class ArticleItem extends Component {
 
     this.state = {
       listItems:                    null,
-      activeItem:                   '1'
+      activeItem:                   '1',
+      total:                        0,
     }
   }
 
@@ -27,14 +28,17 @@ class ArticleItem extends Component {
 
     const listItems = ArticleItems.map(function (value, index) {
 
-      const { id, title, date, summary, image, keywords } = value;
+      const { id, title, englishTitle, date, summary, image, keywords } = value;
+      const link = '/articles/' + date + '/' + englishTitle;
 
       return (
         <Item key={id}>
           <Item.Image src={image} />
 
           <Item.Content verticalAlign="middle">
-            <Item.Header as='a'>{title}</Item.Header>
+            <Item.Header as='a'>
+              <Link to={link}>{title}</Link>
+            </Item.Header>
 
             <Item.Meta>
               <span className='cinema'>{date}</span>
@@ -50,8 +54,11 @@ class ArticleItem extends Component {
       )
     });
 
+    const total = listItems.length;
+
     this.setState({
-      listItems:              listItems
+      listItems:              listItems,
+      total:                  total
     });
   }
 
@@ -63,7 +70,7 @@ class ArticleItem extends Component {
 
     });
 
-    const { listItems, activeItem } = this.state;
+    const { listItems, activeItem, total } = this.state;
 
     return (
       <div className="user-article">
@@ -76,7 +83,7 @@ class ArticleItem extends Component {
             <Label as='a' color='red' tag>Nginx</Label>
             <Label as='a' color='teal' tag>Docker</Label>
             <Statistic size="tiny" color="pink" className="user-count">
-              <Statistic.Value>5,550</Statistic.Value>
+              <Statistic.Value>{total}</Statistic.Value>
               <Statistic.Label>篇</Statistic.Label>
             </Statistic>
           </Segment>

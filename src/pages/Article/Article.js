@@ -1,22 +1,32 @@
 import React, { Component } from 'react';
+import ReactMarkdown from 'react-markdown';
 import T from 'i18n-react';
 import { Link } from 'react-router';
-import ReactMarkdown from 'react-markdown';
 import {
   Sidebar, Segment, Button, Menu, Image, Icon, Header, Loader, Dimmer, Embed,
   Label, Breadcrumb, Item, Image as ImageComponent, Rail, Statistic
 } from 'semantic-ui-react';
 import { ArticleItems } from '../../assets/utils/articleItems';
-import ListLabel from '../../components/ListLabel/ListLabel';
+import ArticleCollec from '../../assets/utils/articleCollection';
 import './Article.css';
+
+
 
 class Article extends Component {
 
   constructor() {
     super();
 
+    // console.log(this.props.params.date + this.props.params.name);
+    console.log(ArticleCollec);
+    // console.log(article);
+
+    const location = window.location.href.split('articles/')[1].split('/').join('-')
+
     this.state = {
-      listItems:                    null
+      listItems:                    null,
+      location:                     location,
+      article:                      ''
     }
   }
 
@@ -25,38 +35,20 @@ class Article extends Component {
     document.body.scrollTop = 0;
     document.documentElement.scrollTop = 0;
 
-    const listItems = ArticleItems.map(function (value, index) {
+    const { location } = this.state;
 
-      const { id, title, date, summary, image, keywords } = value;
+    for (var key in ArticleCollec) {
+      console.log(this.state.location);
 
-      return (
-        <Item key={id}>
-          <Item.Image src={image} />
+      if (location == key) {
+        this.setState({
+          article:            ArticleCollec[key]
+        })
 
-          <Item.Content verticalAlign="bottom">
-            <Item.Header>{title}</Item.Header>
+      } else {
 
-            <Item.Meta>
-              <span className='cinema'>{date}</span>
-            </Item.Meta>
-
-            <Item.Description>{summary}</Item.Description>
-
-            <Item.Extra>
-              <ListLabel labels={keywords} />
-              <Button inverted color="green" className="user-open-btn">
-                查看详情
-                <Icon name='right chevron' />
-              </Button>
-            </Item.Extra>
-          </Item.Content>
-        </Item>
-      )
-    });
-
-    this.setState({
-      listItems:              listItems
-    });
+      }
+    }
   }
 
   render() {
@@ -65,26 +57,15 @@ class Article extends Component {
 
     });
 
-    const { listItems } = this.state;
+    const { article } = this.state;
 
-    const input = `
-      # This is a 1 level header\n
-      ## This is a 4 level header\n
-      我在马路边捡到第三空间健康的方式即可四大皆空加快速度附近可适当健康的说法讲课费加快速
-      cxvvkmxdsfodsfi独守空房考虑速度快吉林省的科技
-    `
-
-    // const input = [
-    //   '# This is a 1 level header\n',
-    //   '## This is a 4 level header\n',
-    //   '我在马路边捡到第三空间健康的方式即可四大皆空加快速度附近可适当健康的说法讲课费加快速',
-    //   'cxvvkmxdsfodsfi独守空房考虑速度快吉林省的科技'
-    // ].join('');
+    console.log(1111111);
+    console.log(article)
 
     return (
       <div>
         <Segment basic color="violet">
-          <ReactMarkdown source={input} />
+          <ReactMarkdown source={article} />
         </Segment>
 
       </div>

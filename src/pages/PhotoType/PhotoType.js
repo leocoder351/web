@@ -137,12 +137,12 @@ class PhotoType extends Component {
     return (
       <Segment basic color="violet" className="user-photo-type">
         <Segment>
-          <Button inverted color='blue'>
-            <Link to='/photos'>返回</Link>
-          </Button>
-          <Button inverted color='violet'>
-            <Link to='/'>首页</Link>
-          </Button>
+          <Link to='/photos'>
+            <Button inverted color='blue'>返回</Button>
+          </Link>
+          <Link to='/'>
+            <Button inverted color='violet'>首页</Button>
+          </Link>
         </Segment>
 
         <Card.Group itemsPerRow={itemsPerRow}>

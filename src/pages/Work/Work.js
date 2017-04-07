@@ -24,9 +24,9 @@ class Work extends Component {
     return (
       <Segment basic color="violet" className="user-photo-type">
         <Segment>
-          <Button inverted color='violet'>
-            <Link to='/'>首页</Link>
-          </Button>
+          <Link to='/'>
+            <Button inverted color='violet'>首页</Button>
+          </Link>
         </Segment>
 
         <Segment basic>

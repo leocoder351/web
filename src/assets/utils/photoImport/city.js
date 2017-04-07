@@ -10,13 +10,13 @@ const city = [
   {
     index:          0,
     src:            C0,
-    caption:        'number 1'
+    caption:        'number 0'
   },
 
   {
     index:          1,
     src:            C1,
-    caption:        'number 2'
+    caption:        'number 1'
   },
 
   {

@@ -74,9 +74,9 @@ class ArticleItem extends Component {
 
     return (
       <Segment basic color="violet" className="user-article">
-        <Button inverted color='violet'>
-          <Link to='/'>首页</Link>
-        </Button>
+        <Link to='/'>
+          <Button inverted color='violet'>首页</Button>
+        </Link>
 
         <Segment className="user-label">
           <Label as='a' color='purple' tag>全部</Label>
@@ -94,7 +94,7 @@ class ArticleItem extends Component {
         <Item.Group divided relaxed>
           {listItems}
 
-          <Item>
+          {/* <Item>
             <Item.Content verticalAlign="middle">
               <Item.Extra>
                 <Menu pagination floated="right">
@@ -108,7 +108,7 @@ class ArticleItem extends Component {
                 </Menu>
               </Item.Extra>
             </Item.Content>
-          </Item>
+          </Item> */}
 
         </Item.Group>
       </Segment>

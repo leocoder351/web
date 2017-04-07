@@ -27,9 +27,9 @@ class Photo extends Component {
     return (
       <Segment basic color="violet" className="user-photo">
         <Segment>
-          <Button inverted color='violet'>
-            <Link to='/'>首页</Link>
-          </Button>
+          <Link to='/'>
+            <Button inverted color='violet'>首页</Button>
+          </Link>
         </Segment>
 
         <Card.Group className="user-photo-item">
@@ -44,10 +44,8 @@ class Photo extends Component {
               <Card.Description>一张美图，一篇好文。</Card.Description>
             </Card.Content>
             <Card.Content extra>
-              <a>
-                <Icon name='image' />
-                共 10 张
-              </a>
+              <Icon name='image' />
+              共 3 张
             </Card.Content>
           </Card>
 
@@ -62,10 +60,8 @@ class Photo extends Component {
               <Card.Description>一个城，一幅景。</Card.Description>
             </Card.Content>
             <Card.Content extra>
-              <a>
-                <Icon name='image' />
-                共 10 张
-              </a>
+              <Icon name='image' />
+              共 7 张
             </Card.Content>
           </Card>
 
@@ -80,10 +76,8 @@ class Photo extends Component {
               <Card.Description>一座高山，一曲南山南。</Card.Description>
             </Card.Content>
             <Card.Content extra>
-              <a>
-                <Icon name='image' />
-                共 10 张
-              </a>
+              <Icon name='image' />
+              共 6 张
             </Card.Content>
           </Card>
         </Card.Group>

@@ -57,12 +57,12 @@ class Article extends Component {
     return (
       <Segment basic color="violet">
         <Segment>
-          <Button inverted color='blue'>
-            <Link to='/articles'>返回</Link>
-          </Button>
-          <Button inverted color='violet'>
-            <Link to='/'>首页</Link>
-          </Button>
+          <Link to='/articles'>
+            <Button inverted color='blue'>返回</Button>
+          </Link>
+          <Link to='/'>
+            <Button inverted color='violet'>首页</Button>
+          </Link>
         </Segment>
 
         <Segment basic>

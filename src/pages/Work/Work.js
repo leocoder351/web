@@ -1,5 +1,10 @@
 import React, { Component } from 'react';
 import T from 'i18n-react';
+import { Link } from 'react-router';
+import {
+  Sidebar, Segment, Button, Menu, Image, Icon, Header, Loader, Dimmer, Embed,
+  Label, Breadcrumb, Item, Image as ImageComponent, Rail, Statistic, Card, Modal
+} from 'semantic-ui-react';
 import './Work.css';
 
 class Work extends Component {
@@ -17,9 +22,17 @@ class Work extends Component {
     });
 
     return (
-      <div>
-        <h1>作品</h1>
-      </div>
+      <Segment basic color="violet" className="user-photo-type">
+        <Segment>
+          <Button inverted color='violet'>
+            <Link to='/'>首页</Link>
+          </Button>
+        </Segment>
+
+        <Segment basic>
+          <h1>作品</h1>
+        </Segment>
+      </Segment>
     );
   }
 }

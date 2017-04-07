@@ -17,10 +17,6 @@ class Article extends Component {
   constructor() {
     super();
 
-    // console.log(this.props.params.date + this.props.params.name);
-    console.log(ArticleCollec);
-    // console.log(article);
-
     const location = window.location.href.split('articles/')[1].split('/').join('-')
 
     this.state = {
@@ -38,7 +34,6 @@ class Article extends Component {
     const { location } = this.state;
 
     for (var key in ArticleCollec) {
-      console.log(this.state.location);
 
       if (location == key) {
         this.setState({
@@ -59,16 +54,22 @@ class Article extends Component {
 
     const { article } = this.state;
 
-    console.log(1111111);
-    console.log(article)
-
     return (
-      <div>
-        <Segment basic color="violet">
+      <Segment basic color="violet">
+        <Segment>
+          <Button inverted color='blue'>
+            <Link to='/articles'>返回</Link>
+          </Button>
+          <Button inverted color='violet'>
+            <Link to='/'>首页</Link>
+          </Button>
+        </Segment>
+
+        <Segment basic>
           <ReactMarkdown source={article} />
         </Segment>
 
-      </div>
+      </Segment>
     );
   }
 }

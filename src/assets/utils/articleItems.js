@@ -83,7 +83,6 @@ const ArticleItems = [
     keywords:           ['NIH', 'ADD', 'HTML', 'JAVASCRIPT']
   },
 
-
 ];
 
 module.exports = {
